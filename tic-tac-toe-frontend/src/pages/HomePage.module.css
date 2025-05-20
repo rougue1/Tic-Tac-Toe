@@ -1,0 +1,40 @@
+.homeContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+.actions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.actionButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    min-width: 200px; /* Ensure buttons have a decent width */
+}
+
+.actionButton:hover {
+    background-color: #218838;
+}
+
+.logoutButton {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    background-color: #c82333;
+}

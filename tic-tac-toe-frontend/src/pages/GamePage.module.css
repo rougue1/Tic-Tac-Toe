@@ -1,0 +1,55 @@
+.gamePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.gameInfo {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.gameInfo p {
+    margin: 5px 0;
+}
+
+.statusMessage {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 20px; /* Prevent layout shift */
+    color: #333;
+}
+
+.centerStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    font-size: 1.5em;
+}
+.centerStatus.error {
+    color: red;
+}
+.centerStatus button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 0.8em;
+}
+
+.homeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.homeButton:hover {
+    background-color: #0056b3;
+}

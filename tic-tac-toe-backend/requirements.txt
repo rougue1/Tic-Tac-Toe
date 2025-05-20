@@ -1,0 +1,12 @@
+Flask==2.3.3
+Flask-SQLAlchemy==3.1.1
+psycopg2-binary==2.9.9  # For PostgreSQL
+Flask-Migrate==4.0.5    # For database migrations
+Flask-SocketIO==5.3.6
+Flask-JWT-Extended==4.5.3
+python-dotenv==1.0.0
+Werkzeug==2.3.8         # Ensure compatibility, sometimes newer versions break things
+shortuuid==1.0.11       # For generating short room codes
+Flask-CORS==4.0.0       # For Cross-Origin Resource Sharing
+greenlet==3.0.1         # Often needed by Flask-SocketIO/eventlet/gevent
+eventlet==0.33.3        # A concurrent networking library for SocketIO

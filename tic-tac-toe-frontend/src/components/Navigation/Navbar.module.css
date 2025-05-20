@@ -1,0 +1,51 @@
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navBrand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li {
+    margin-left: 20px;
+}
+
+.navLinks a,
+.navLinks .navButton {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.navLinks a:hover,
+.navLinks .navButton:hover {
+    background-color: #555;
+}
+
+.navButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit; /* Ensures button text size matches link text size */
+}
+.userInfo {
+    color: #aaa;
+    font-style: italic;
+}

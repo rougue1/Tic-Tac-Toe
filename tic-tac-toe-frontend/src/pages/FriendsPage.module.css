@@ -1,0 +1,129 @@
+.friendsContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.friendsContainer h2,
+.friendsContainer h3,
+.friendsContainer h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+.friendsContainer h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.listItem:last-child {
+    border-bottom: none;
+}
+
+.listItem.online .statusIndicator {
+    color: green;
+    font-weight: bold;
+}
+.listItem.offline .statusIndicator {
+    color: grey;
+}
+.statusIndicator {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.searchForm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.searchForm input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px; /* To join input and button */
+}
+
+.searchForm button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.searchForm button:hover {
+    background-color: #0056b3;
+}
+
+.acceptButton,
+.addButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.declineButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.acceptButton:hover,
+.addButton:hover {
+    background-color: #218838;
+}
+.declineButton:hover {
+    background-color: #c82333;
+}
+
+.errorMessage {
+    /* From global.css or define here */
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.successMessage {
+    /* From global.css or define here */
+    color: green;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}

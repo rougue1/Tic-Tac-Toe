@@ -1,0 +1,57 @@
+.listContainer {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.listContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.listItem:last-child {
+    border-bottom: none;
+}
+
+.listItem span {
+    font-size: 1.1em;
+}
+
+.actionButton {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.actionButton:hover {
+    background-color: #218838;
+}
+
+.centerMessage {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
+.centerMessage.error {
+    color: red;
+}
