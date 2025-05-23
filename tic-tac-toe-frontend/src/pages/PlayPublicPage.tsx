@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useSocket } from "../contexts/SocketContext";
 import { useAuth } from "../contexts/AuthContext";
 import { fetchAvailablePlayersApi, setReadyToPlayApi, setUnreadyToPlayApi, startGameWithPlayerApi } from "../services/api";
-import { AvailablePlayer, Game, GameUpdatePayload } from "../types";
+import { AvailablePlayer, Game } from "../types";
 import styles from "./ListPage.module.css"; // Reuse ListPage styles
 
 const PlayPublicPage: React.FC = () => {
@@ -41,9 +41,15 @@ const PlayPublicPage: React.FC = () => {
     useEffect(() => {
         if (!socket || !isConnected) return;
 
-        const handleAvailablePlayersUpdate = (players: AvailablePlayer[]) => {
-            console.log("Available players update received:", players);
-            setAvailablePlayers(players);
+        const handleAvailablePlayersUpdate = (allPlayers: AvailablePlayer[]) => {
+            console.log("All available players update received:", allPlayers);
+            if (user && user.id) {
+                const filteredPlayers = allPlayers.filter((player) => player.id !== user.id);
+                setAvailablePlayers(filteredPlayers);
+            } else {
+                console.warn("User context not available for filtering player list.");
+                setAvailablePlayers(allPlayers);
+            }
         };
 
         const handleGameInvite = (data: { msg: string; game_details: Game }) => {
@@ -67,7 +73,7 @@ const PlayPublicPage: React.FC = () => {
             socket.off("game_invite", handleGameInvite);
             socket.off("game_started_direct", handleGameStartedDirect);
         };
-    }, [socket, isConnected, navigate]);
+    }, [socket, isConnected, navigate, user]);
 
     const toggleReadyStatus = async () => {
         setIsLoading(true);
